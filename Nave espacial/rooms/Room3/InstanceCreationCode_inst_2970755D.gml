@@ -1,1 +1,0 @@
-progreso = 1;

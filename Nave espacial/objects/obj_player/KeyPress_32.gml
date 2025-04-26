@@ -1,1 +1,0 @@
-show_message(obj_queen_mimic.estado)
