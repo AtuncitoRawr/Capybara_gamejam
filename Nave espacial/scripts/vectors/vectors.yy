@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"vectors",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vectors",
+  "parent":{
+    "name":"Sistema",
+    "path":"folders/Scripts/Sistema.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_mine_activation",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.541187,
+  "name":"snd_mine_activation",
+  "parent":{
+    "name":"proyectiles",
+    "path":"folders/Sonidos/proyectiles.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_mine_activation.MP3",
+  "type":0,
+  "volume":1.0,
+}

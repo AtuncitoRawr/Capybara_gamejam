@@ -1,0 +1,1 @@
+text = "ve hacia la luz"

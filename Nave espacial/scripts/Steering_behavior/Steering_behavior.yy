@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Steering_behavior",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Steering_behavior",
+  "parent":{
+    "name":"Sistema",
+    "path":"folders/Scripts/Sistema.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

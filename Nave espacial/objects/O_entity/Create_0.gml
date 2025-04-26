@@ -1,0 +1,15 @@
+hp = 1
+shield = false
+state = STATE_IDLE;
+invencible = false;
+target_id = noone;
+xp = x;
+yp = y;
+layer = layer;
+hurt_time = 60;
+flicker_initial = 16;
+flicker = flicker_initial/2;
+hsp = 0;
+vsp = 0;
+knockback_time = 0;
+path = 0

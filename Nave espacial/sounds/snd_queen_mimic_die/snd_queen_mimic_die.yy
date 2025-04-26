@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_queen_mimic_die",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":7.512,
+  "name":"snd_queen_mimic_die",
+  "parent":{
+    "name":"entidades",
+    "path":"folders/Sonidos/entidades.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_queen_mimic_die.mp3",
+  "type":0,
+  "volume":1.0,
+}

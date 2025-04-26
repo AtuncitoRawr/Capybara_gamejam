@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Weighted_circle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Weighted_circle",
+  "parent":{
+    "name":"enemy",
+    "path":"folders/Scripts/enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

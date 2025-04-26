@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerUpdateInventory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerUpdateInventory",
+  "parent":{
+    "name":"player_Menus",
+    "path":"folders/Scripts/player/player_Menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerCheckInteraction",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerCheckInteraction",
+  "parent":{
+    "name":"player_Menus",
+    "path":"folders/Scripts/player/player_Menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrUseIluminador",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrUseIluminador",
+  "parent":{
+    "name":"Item_Efectos",
+    "path":"folders/Scripts/Item_Efectos.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

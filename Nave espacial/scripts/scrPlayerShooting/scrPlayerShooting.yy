@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerShooting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerShooting",
+  "parent":{
+    "name":"weapon_system",
+    "path":"folders/Scripts/weapon_system.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

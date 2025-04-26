@@ -1,0 +1,1 @@
+mp_grid_clear_cell(global.mp_grid,floor(x/64), floor(y/64));

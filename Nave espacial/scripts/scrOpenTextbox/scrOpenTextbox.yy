@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrOpenTextbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrOpenTextbox",
+  "parent":{
+    "name":"TextBox",
+    "path":"folders/Scripts/TextBox.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

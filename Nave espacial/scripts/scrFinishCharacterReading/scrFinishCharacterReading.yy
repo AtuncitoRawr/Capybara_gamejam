@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrFinishCharacterReading",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrFinishCharacterReading",
+  "parent":{
+    "name":"TextBox",
+    "path":"folders/Scripts/TextBox.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

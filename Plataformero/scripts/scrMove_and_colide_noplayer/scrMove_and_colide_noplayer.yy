@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMove_and_colide_noplayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMove_and_colide_noplayer",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
