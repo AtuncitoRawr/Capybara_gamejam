@@ -42,6 +42,7 @@
     {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},},
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oTest","path":"objects/oTest/oTest.yy",},},
     {"id":{"name":"oText_box","path":"objects/oText_box/oText_box.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"rm0","path":"rooms/rm0/rm0.yy",},},
