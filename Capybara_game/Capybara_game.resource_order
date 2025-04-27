@@ -22,7 +22,6 @@
     {"name":"oCapybara","order":6,"path":"objects/oCapybara/oCapybara.yy",},
     {"name":"oEnemy","order":1,"path":"objects/oEnemy/oEnemy.yy",},
     {"name":"oGame","order":2,"path":"objects/oGame/oGame.yy",},
-    {"name":"oTest","order":8,"path":"objects/oTest/oTest.yy",},
     {"name":"oText_box","order":5,"path":"objects/oText_box/oText_box.yy",},
     {"name":"oWall","order":4,"path":"objects/oWall/oWall.yy",},
     {"name":"rm0","order":1,"path":"rooms/rm0/rm0.yy",},
