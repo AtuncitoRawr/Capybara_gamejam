@@ -13,7 +13,7 @@
   "name":"snd_voice",
   "parent":{
     "name":"Sonidos",
-    "path":"folders/Sonidos.yy",
+    "path":"folders/Juego principal/Sonidos.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

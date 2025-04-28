@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oPlayer",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oDoor",
+  "eventList":[],
   "managed":true,
-  "name":"oPlayer",
+  "name":"oDoor",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
-    "path":"folders/Plataformero/Objetos.yy",
+    "path":"folders/Juego principal/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sCapyspeak",
-    "path":"sprites/sCapyspeak/sCapyspeak.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

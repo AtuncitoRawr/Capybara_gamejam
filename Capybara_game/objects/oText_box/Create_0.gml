@@ -4,11 +4,11 @@ controlSetup();
 depth = -9999;
 
 // parametros de la caja de texto
-textbox_width = 120;
-textbox_height = 40;
+textbox_width = 240;
+textbox_height = 80;
 txtb_dir = 0;
-border = 3;
-line_sep = 8;
+border = 4;
+line_sep = 12;
 line_width = textbox_width - border*2;
 owner_id = 0;
 

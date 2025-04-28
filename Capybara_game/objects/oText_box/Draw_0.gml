@@ -235,13 +235,13 @@ if draw_char == text_length[page] && page  == page_number - 1
 	
 	
 	//Dibujar opciones
-	var _op_space = 20;
+	var _op_space = 30;
 	var _op_board = 10;
 	for (var op = 0;op < option_number; op++)
 	{
 		//Las opciones en la caja
 		var _o_w = string_width(option[op]) + _op_board*2;
-		draw_sprite_ext(txtb_spr[page], txtb_img, _txtb_x , _txtb_y - _op_space*option_number + _op_space*op, _o_w/txtb_spr_w, (_op_space-8)/txtb_spr_h, 0, c_white, 1);
+		draw_sprite_ext(txtb_spr[page], txtb_img, _txtb_x , _txtb_y - _op_space*option_number + _op_space*op, _o_w/txtb_spr_w, (_op_space-10)/txtb_spr_h, 0, c_white, 1);
 		
 		//la flecha de opciones
 		if option_pos == op
@@ -249,7 +249,7 @@ if draw_char == text_length[page] && page  == page_number - 1
 			draw_sprite(sArrowOption, 0, _txtb_x - 20,  _txtb_y - _op_space*option_number + _op_space*op);	
 		}
 		//Dibujar el texto de las opciones
-		draw_text_color(_txtb_x + _op_board,  _txtb_y - _op_space*option_number + _op_space*op - 1 , option[op], col_1[c, page], col_2[c, page], col_3[c, page], col_4[c, page], 1);
+		draw_text_color(_txtb_x + _op_board,  _txtb_y - _op_space*option_number + _op_space*op , option[op], col_1[c, page], col_2[c, page], col_3[c, page], col_4[c, page], 1);
 		
 	}
 	

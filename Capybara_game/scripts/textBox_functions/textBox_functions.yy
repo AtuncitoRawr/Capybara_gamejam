@@ -6,7 +6,7 @@
   "name":"textBox_functions",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "path":"folders/Juego principal/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

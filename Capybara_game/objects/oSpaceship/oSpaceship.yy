@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oPlayer",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oSpaceship",
+  "eventList":[],
   "managed":true,
-  "name":"oPlayer",
+  "name":"oSpaceship",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
-    "path":"folders/Plataformero/Objetos.yy",
+    "path":"folders/Nave espacial/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sCapyspeak",
-    "path":"sprites/sCapyspeak/sCapyspeak.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

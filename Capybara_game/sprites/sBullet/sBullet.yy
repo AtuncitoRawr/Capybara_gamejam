@@ -30,7 +30,7 @@
   "origin":0,
   "parent":{
     "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "path":"folders/Juego principal/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -67,6 +67,8 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
+    "seqHeight":16.0,
+    "seqWidth":16.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,

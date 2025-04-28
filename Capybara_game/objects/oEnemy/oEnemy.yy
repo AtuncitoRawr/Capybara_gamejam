@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "path":"folders/Plataformero/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

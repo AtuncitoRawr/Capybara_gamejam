@@ -6,7 +6,7 @@
   "name":"General_options",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "path":"folders/Juego principal/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
