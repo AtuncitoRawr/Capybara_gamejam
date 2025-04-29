@@ -2,7 +2,7 @@ controlSetup();
 
 
 depth = -9999;
-
+finish_text = false;
 // parametros de la caja de texto
 textbox_width = 240;
 textbox_height = 80;
@@ -29,8 +29,6 @@ text_length[0] = string_length(text[0]);
 char[0, 0] = "";
 char_x[0, 0] = 0;
 chay_y[0, 0] = 0;
-
-
 
 draw_char = 0;
 text_speed = 0.4;

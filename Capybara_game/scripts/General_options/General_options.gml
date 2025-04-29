@@ -9,6 +9,125 @@ jumpKeyBufferTimer = 0;
 		
 }
 
+function setOnGround(_val = true)
+{
+	if _val == true
+	{
+		onGround = true;
+		coyoteHangTimer = coyoteHangFrames;
+		airAttackCount = 0;
+	} else {
+		onGround = false;
+		myFloorPlat = noone;
+		coyoteHangTimer = 0;
+	}
+}
+
+
+function setOnGroundItem(_val = true)
+{
+	if _val == true
+	{
+		onGround = true;
+
+	} else {
+		onGround = false;
+		myFloorPlat = noone;
+	}
+}
+
+function getAcelleration()
+{
+	if moveDir > 0
+		{
+		moveDir = 1
+		face = 1;
+		} else if moveDir < 0
+		{
+			moveDir = -1;
+			face = -1;	
+		}
+		
+	if moveDir != 0
+		{
+			if last_dir != moveDir
+			{
+				last_dir = moveDir;
+				moveSpd = 0;
+			}
+		
+			if moveSpd < moveMaxSpd
+			{
+				runType = 0;
+				moveSpd += accel;	
+			} else {
+				runType = 1;	
+				moveSpd = moveMaxSpd
+			}
+		}
+		else
+		{
+			if moveSpd < moveMaxSpd
+			{
+				runType = 0;	
+				startRunning = 0
+			}
+			
+			if moveSpd > 0
+			{
+				moveSpd -= accel;
+			}
+		
+		}
+	if moveSpd < accel
+	{
+		moveSpd = 0;
+		last_dir = 0;
+	}	
+}
+
+function checkForSemiSolidPlataform(_x, _y)
+{
+	//Crear una variable de return
+	var _rtrn = noone;
+	
+	//No deberiamos movernos arriba, y entonces verificar por una colision
+	if yspd >= 0 && place_meeting(_x,_y, oSemiSolidWall)
+	{
+		//Crear una lista DS para guardar todas las colisiones de la instancia oSemiSolidWall
+		var _list = ds_list_create();
+		var _listSize = instance_place_list(_x, _y, oSemiSolidWall, _list, false);
+		
+		//Hacer un bucle con las coliciones y solo retornar la que este por debajo del jugador
+		for(var i = 0;i< _listSize;i++)
+		{
+			var _listInst = _list[| i]
+			if _listInst != myFloorPlat && floor(bbox_bottom) <= ceil(_listInst.bbox_top - _listInst.yspd)
+			{
+				//Retornar el id de una plataforma semisolida
+				_rtrn = _listInst;
+				//Salir del bucle antes
+				i = _listSize;
+			}
+		}
+		//destruir la lista DS para liberar memoria
+		ds_list_destroy(_list);
+	}
+	
+	//Retornar nuestra variable
+	return _rtrn;
+}
+
+function alarmPause()
+{
+	if global.timeStop == 0
+	{
+		if alarm[0] > 0
+		{
+			alarm[0]++;
+		}
+	}
+}
 
 function getControls()
 {
@@ -50,7 +169,7 @@ function getControls()
 		
 		
 //Acciones
-		InteractKey = keyboard_check_pressed(ord("X")) + mouse_check_button(mb_left) + gamepad_button_check_pressed(_gamepad, gp_face3);
+		InteractKey = keyboard_check_pressed(ord("X")) + gamepad_button_check_pressed(_gamepad, gp_face3);
 		InteractKey = clamp(InteractKey, 0, 1);
 
 		jumpKeyPressed = keyboard_check_pressed(vk_space) + gamepad_button_check_pressed(_gamepad, gp_face1);
@@ -66,11 +185,10 @@ function getControls()
 		loopKey = clamp(loopKey, 0, 1);
 		
 		
-		
 		startKeyPressed = keyboard_check_pressed(vk_enter) + gamepad_button_check_pressed(_gamepad, gp_start);
 		startKeyPressed = clamp(startKeyPressed, 0, 1);
 		
-		attackKeyPressed = keyboard_check_pressed(ord("Z")) + gamepad_button_check_pressed(_gamepad, gp_shoulderr);
+		attackKeyPressed = keyboard_check_pressed(ord("Z")) + mouse_check_button_pressed(mb_left) + gamepad_button_check_pressed(_gamepad, gp_shoulderr);
 		attackKeyPressed = clamp(attackKeyPressed, 0, 1);
 
 //Buffering con el salto
@@ -88,5 +206,48 @@ function getControls()
 
 			jumpKeyBuffered = 0;	
 		}
+
+}
+
+
+function scrCheck_gamepad(_gamepad){
+	check = false;
+	
+	var _right,_left,_up,_down,_xaxisleft,_yaxisleft,_xaxisright,_yaxisright,_face1,_face2,_face3,
+	_face4,_start,_select,_lb,_lt,_rb,_rt	
+	
+	_right = gamepad_button_check(_gamepad, gp_padr) 
+	_left =  gamepad_button_check(_gamepad, gp_padl);
+	_up   =  gamepad_button_check(_gamepad, gp_padu);
+	_down =  gamepad_button_check(_gamepad, gp_padd);
+	
+	_xaxisleft = gamepad_axis_value(_gamepad, gp_axislh) + (_right - _left);
+	_yaxisleft = gamepad_axis_value(_gamepad, gp_axislv) + (_down - _up);
+	
+    _xaxisright = gamepad_axis_value(_gamepad, gp_axisrh);
+	_yaxisright = gamepad_axis_value(_gamepad, gp_axisrv);
+
+	_face1 = gamepad_button_check_pressed(_gamepad, gp_face1);
+	_face2 = gamepad_button_check_pressed(_gamepad, gp_face2);
+	_face3 = gamepad_button_check_pressed(_gamepad, gp_face3);
+	_face4 = gamepad_button_check_pressed(_gamepad, gp_face4);
+
+	_lb = gamepad_button_check_pressed(_gamepad, gp_shoulderl);
+	_lt = gamepad_button_check_pressed(_gamepad, gp_shoulderlb);
+	_rb = gamepad_button_check_pressed(_gamepad, gp_shoulderr);
+	_rt = gamepad_button_check_pressed(_gamepad,gp_shoulderrb);
+
+	_start = gamepad_button_check_pressed(_gamepad, gp_start)
+	_select = gamepad_button_check_pressed(_gamepad, gp_select)
+	
+	
+	if (_right != 0 or _left != 0 or _up != 0 or _down != 0 or _xaxisleft != 0 or _yaxisleft != 0
+	or _xaxisright != 0 or _yaxisright != 0 or _face1 != 0 or _face2 != 0 or _face3 != 0 or 
+	_face4 != 0 or _lb != 0 or _lt != 0 or _rb != 0 or _rt != 0 or _start != 0 or _select != 0) {
+	
+	check = true 
+	} else {
+	check = false;	
+	}
 
 }

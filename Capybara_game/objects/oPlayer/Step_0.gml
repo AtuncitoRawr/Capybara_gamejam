@@ -1,47 +1,109 @@
+getControls()
+alarmPause();
 
-if position_meeting(mouse_x, mouse_y, id) && mouse_check_button_pressed(mb_left)
+if alarm[0] > 0 && global.timeStop == 1
 {
-	scrCreateTextbox(text_id);
-}
-
-
-moveDir = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-
-xspd = moveSpd * moveDir;
-
-
-//La direccion del mouse
-var _dir = point_direction(x,y,mouse_x, mouse_y)
-
-var _subPixel = 0.5;
-if place_meeting(x + xspd, y, oWall)
-{
-	var _pixelCheck = _subPixel * sign(xspd)
-	while !place_meeting(x + _pixelCheck, y, oWall)
-	{
-		x += _pixelCheck;	
+	if invTimer == 0 && invAlpha == 1
+	{	
+		invAlpha = 0.2;
+		invTimer = invFrames;
+	} else if invTimer == 0 && invAlpha == 0.2 {
+		
+		invAlpha = 1;
+		invTimer = invFrames;
+	
+	} else {
+		invTimer--;
 	}
-	xspd = 0;
+} else {
+	invAlpha = 1;	
 }
 
-x += xspd
+image_xscale = face;
 
-yspd += grav;
-
-if keyboard_check_pressed(vk_space) && place_meeting(x, y+1, oWall)
+switch (state) 
 {
-	yspd = jspd;	
+	case STATE_IDLE: 
+		scrStateControl();
+		scrPlayerMovement();
+		scrMove_and_colide();
+		scrSpriteControl();
+	break;
+	
+	case STATE_WALK:
+		scrStateControl();
+		scrPlayerMovement();
+		scrMove_and_colide();
+		scrSpriteControl();
+	break;
+
+	case STATE_RUN:
+		scrStateControl();
+		scrPlayerMovement();
+		scrMove_and_colide();
+		scrSpriteControl();
+	break;
+	
+	case STATE_JUMP:
+		scrStateControl();
+		scrPlayerMovement();
+		scrMove_and_colide();
+		scrSpriteControl();
+	break;
+	
+	case STATE_CROUCHING:
+		scrStateControl();
+		scrPlayerMovement();
+		scrSpriteControl();
+		scrMove_and_colide();
+
+	break;
+	
+	case STATE_FALL:
+		scrStateControl();
+		scrPlayerMovement();
+		scrMove_and_colide();
+		scrSpriteControl();
+	break;
+	
+	case STATE_FIRST_ATTACK:
+		scrMove_and_colide();
+		scrPlayerFirstAttack();
+		scrSpriteControl();
+	break;
+	
+	case STATE_SECOND_ATTACK:
+		scrMove_and_colide();
+		scrPlayerSecondAttack();
+		scrSpriteControl();
+	break;
+	
+	case STATE_THIRD_ATTACK:
+		scrMove_and_colide();
+		scrPlayerThirdAttack();
+		scrSpriteControl();
+	break;
+	
+	case STATE_AIR_ATTACK:
+		scrStateControl();
+		scrMove_and_colide();
+		scrPlayerAirAttack();
+		scrSpriteControl();
+	break;
+	
+	case STATE_HIT:
+		calc_knockback_time();
+		scrMove_and_colide();
+		scrSpriteControl();
+	break;
+	
+	case STATE_DEAD:
+		hp = 0; 
+		xspd = 0;
+		scrSpriteControl();
+		if animation_end(){image_index = -1;}
+	break;
+	
 }
+	
 
-
-if place_meeting(x, y + yspd, oWall)
-{
-	var _pixelCheck = _subPixel * sign(yspd)
-	while !place_meeting(x, y + _pixelCheck, oWall)
-	{
-		y += _pixelCheck;	
-	}
-	yspd = 0;
-}
-
-y += yspd;

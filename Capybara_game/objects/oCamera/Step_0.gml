@@ -1,3 +1,7 @@
+if instance_exists(oSpaceship) {
+		
+	follow = oSpaceship;
+} 
 
 
 //Actualizacion de la camara
@@ -8,7 +12,6 @@ if (instance_exists(follow))
 	xTo = follow.x
 	yTo = follow.y 
 }
-
 
 
 //Actualizar la posicion del objeto
