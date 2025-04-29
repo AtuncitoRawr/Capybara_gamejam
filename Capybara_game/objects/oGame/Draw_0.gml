@@ -17,7 +17,6 @@ draw_text(_x + 10, _y + 30, alarm_get(0));
 
 if instance_exists(oDoor)
 {
-	draw_text(_x + 10, _y + 40, lastDoor);
 	draw_text(_x + 10, _y + 50, oDoor.doorColor);	
 }
 

@@ -4,39 +4,29 @@ y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) /
 
 if doorHasCreate == false 
 {
-	if global.repetitions < 6
+	if global.repetitions > 6 
 	{
-		var _door = choose(0,1,2);
-		if _door != oGame.lastDoor
-		{
-			doorColor = _door;
-			oGame.lastDoor = _door;
-		} else {
-			instance_destroy();	
-		}
-	} else {
 		doorColor = 3;
-		oGame.lastDoor = 3;
-}
+	}
 
 	switch doorColor
 	{
-		case 0:
+		case BLUE_DOOR:
 		sprite_index = sDoorBlue;
 		image_index = 0;
 		break;
 	
-		case 1:
+		case RED_DOOR:
 		sprite_index = sDoorRed;
 		image_index = 0;
 		break;
 	
-		case 2:
+		case YELLOW_DOOR:
 		sprite_index = sDoorYellow;
 		image_index = 0;
 		break;
 		
-		case 3:
+		case FINAL_DOOR:
 		sprite_index = sDoorFinal;
 		image_index = 0;
 		break;

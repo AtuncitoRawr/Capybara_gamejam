@@ -43,5 +43,11 @@ if instance_exists(oText_box)
 
 if !instance_exists(oDoor) && room == Room2
 {
-	instance_create_layer(_x, _y,"Instances", oDoor)	
+	
+	var _weight = choose_weighted(doorList[0,0], doorList[1, 0], doorList[0,1], doorList[1,1] , doorList[0,2], doorList[1,2])
+	
+	var _door = instance_create_layer(_x, _y,"Instances", oDoor)	
+	_door.doorColor = _weight
+	
+	
 }

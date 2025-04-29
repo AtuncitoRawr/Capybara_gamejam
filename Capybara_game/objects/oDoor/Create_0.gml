@@ -1,6 +1,4 @@
-doorColor = choose(0, 1, 2);
-doorList = [0,1,2]
-lastDoor = doorColor;
+doorColor = 0;
 doorHasCreate = false;
 isSelected = false;
 
