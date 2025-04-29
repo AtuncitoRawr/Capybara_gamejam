@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
-    "path":"folders/Plataformero/Objetos.yy",
+    "path":"folders/Pelea/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

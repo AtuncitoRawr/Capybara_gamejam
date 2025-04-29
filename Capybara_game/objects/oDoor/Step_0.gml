@@ -2,17 +2,22 @@ x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) /2
 y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) /2 - (62 /2);
 
 
-
-if doorHasCreate == false
+if doorHasCreate == false 
 {
-	var _door = choose(0,1,2);
-	if _door != oGame.lastDoor
+	if global.repetitions < 6
 	{
-		doorColor = _door;
-		oGame.lastDoor = _door;
+		var _door = choose(0,1,2);
+		if _door != oGame.lastDoor
+		{
+			doorColor = _door;
+			oGame.lastDoor = _door;
+		} else {
+			instance_destroy();	
+		}
 	} else {
-		instance_destroy();	
-	}
+		doorColor = 3;
+		oGame.lastDoor = 3;
+}
 
 	switch doorColor
 	{
@@ -30,11 +35,16 @@ if doorHasCreate == false
 		sprite_index = sDoorYellow;
 		image_index = 0;
 		break;
+		
+		case 3:
+		sprite_index = sDoorFinal;
+		image_index = 0;
+		break;
 	}
 	
-doorHasCreate = true;
-
+		doorHasCreate = true;
 }
+
 
 if instance_exists(self)
 {

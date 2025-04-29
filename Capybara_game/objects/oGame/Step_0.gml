@@ -1,12 +1,32 @@
+getControls();
+
 var _x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) /2 - (33 /2);
 var _y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) /2 - (62 /2);
 
 
-if keyboard_check_pressed(vk_enter)
+if startKeyPressed
 {
 	room_restart();	
 	global.repetitions++
 }
+
+if keyboard_check_pressed(ord("I"))
+{
+	global.spaceWins++;	
+}
+
+if keyboard_check_pressed(ord("O"))
+{
+	global.fightWins++;	
+}
+
+if keyboard_check_pressed(ord("P"))
+{
+	global.platafomerWins++;	
+}
+
+
+
 
 if instance_exists(oText_box)
 	{

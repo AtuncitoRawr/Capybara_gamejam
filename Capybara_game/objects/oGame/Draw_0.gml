@@ -21,5 +21,6 @@ if instance_exists(oDoor)
 	draw_text(_x + 10, _y + 50, oDoor.doorColor);	
 }
 
-draw_text(_x + 10, _y + 70, global.repetitions);
+draw_text(_x + 10, _y + 70, $"space wins: {global.spaceWins} " + $"\nfight wins: {global.fightWins}" +
+ $"\nplataformer wins: {global.platafomerWins}");
 

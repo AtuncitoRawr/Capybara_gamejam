@@ -26,7 +26,7 @@
   "origin":7,
   "parent":{
     "name":"Sprites",
-    "path":"folders/Plataformero/Sprites.yy",
+    "path":"folders/Pelea/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
