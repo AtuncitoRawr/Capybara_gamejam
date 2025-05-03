@@ -1,7 +1,7 @@
 function controlSetup() {
 	
 
-bufferTime = 22;
+bufferTime = 10;
 
 jumpKeyBuffered = 0;
 jumpKeyBufferTimer = 0;
@@ -9,17 +9,29 @@ jumpKeyBufferTimer = 0;
 		
 }
 
+function floatText(_x, _y, _time, _spd, _text, _size, _col)
+{
+	var _float = instance_create_layer(x, y, "Instances", oTextfloat)
+	_float.tx =  _x;
+	_float.ty = _y;
+	_float.timeOn = _time;
+	_float.alphaSpd = _spd;
+	_float.text = _text;
+	_float.size = _size;
+	_float.color = _col
+}
+
+
+
 function setOnGround(_val = true)
 {
 	if _val == true
 	{
 		onGround = true;
-		coyoteHangTimer = coyoteHangFrames;
 		airAttackCount = 0;
 	} else {
 		onGround = false;
 		myFloorPlat = noone;
-		coyoteHangTimer = 0;
 	}
 }
 
@@ -37,17 +49,7 @@ function setOnGroundItem(_val = true)
 }
 
 function getAcelleration()
-{
-	if moveDir > 0
-		{
-		moveDir = 1
-		face = 1;
-		} else if moveDir < 0
-		{
-			moveDir = -1;
-			face = -1;	
-		}
-		
+{	
 	if moveDir != 0
 		{
 			if last_dir != moveDir
@@ -58,21 +60,13 @@ function getAcelleration()
 		
 			if moveSpd < moveMaxSpd
 			{
-				runType = 0;
 				moveSpd += accel;	
 			} else {
-				runType = 1;	
 				moveSpd = moveMaxSpd
 			}
 		}
 		else
 		{
-			if moveSpd < moveMaxSpd
-			{
-				runType = 0;	
-				startRunning = 0
-			}
-			
 			if moveSpd > 0
 			{
 				moveSpd -= accel;

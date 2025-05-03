@@ -5,18 +5,37 @@ function Macros(){
 	#macro YELLOW_DOOR 2
 	#macro FINAL_DOOR 3
 //Probabilidades
-	#macro COMPLETE 2
-	#macro HALF 1
-	#macro NOONE 0
+	#macro COMPLETE 333
+	#macro PIECE 1
+	#macro NOTHING 0
 
-//Estados
+//Estados juego de pelea
 	#macro STATE_IDLE 0
 	#macro STATE_WALK 1
-	#macro STATE_JUMP 2
-	#macro STATE_CROUCH	3
-	#macro STATE_HIT 4
-	#macro STATE_ATTACK 5
-	#macro STATE_SECOND_ATTACK 6
-	#macro STATE_THIRD_ATTACK 7
-	#macro STATE_KICK 6
+	#macro STATE_GUARD_WALK 2
+	#macro STATE_JUMP 3
+	#macro STATE_FALL 4
+	#macro STATE_CROUCH	5
+	#macro STATE_HIT 6
+	#macro STATE_AIR_HIT 7
+	#macro STATE_BLOCK 8
+	#macro STATE_ATTACK_SHORT 9
+	#macro STATE_ATTACK_SHORT_CLOSE 10
+	#macro STATE_ATTACK_LARGE 11
+	#macro STATE_ATTACK_LARGE_CLOSE 12
+	#macro STATE_KICK_SHORT 13
+	#macro STATE_KICK_SHORT_CLOSE 14
+	#macro STATE_KICK_LARGE 15
+	#macro STATE_KICK_LARGE_CLOSE 16
+	#macro STATE_AIR_ATTACK_SHORT 17
+	#macro STATE_AIR_ATTACK_LARGE 18
+	#macro STATE_AIR_KICK_SHORT 19
+	#macro STATE_AIR_KICK_LARGE 20
+	#macro STATE_CROUCH_ATTACK_SHORT 21
+	#macro STATE_CROUCH_ATTACK_LARGE 22
+	#macro STATE_CROUCH_KICK_SHORT 23
+	#macro STATE_CROCYH_KICK_LARGE 24
+	#macro STATE_GRAB 25
+	#macro STATE_DEAD 26
+	
 }

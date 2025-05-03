@@ -76,8 +76,25 @@ image_angle += _diff * 0.2;
 //Disparo
 if attackKeyPressed
 {
+	oSFX.play_sound(sndBullet)
+
 	var _bullet = instance_create_layer(x ,y, "Instances", oBullet)
-	_bullet.moveSpd = 4;
+	_bullet.moveSpd = 10;
 	_bullet.dir = image_angle
 }
+
+//para no desaparecer en los lados de la pantalla
+move_wrap(true, false, 0)
+
+var limite_inferior = room_height - 32
+//si la coordenada y se pasa del limite, se resetea pa ser igual al limite
+if (y > limite_inferior) {
+    y = limite_inferior;
+    //si se mueve pa abajo, velocidad 0
+	//si se mueve pa arriba si se deja
+    if (yspd > 0) {
+        yspd = 0;
+    }
+}
+
 

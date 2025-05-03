@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndVictoriaNave",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.966077,
+  "name":"sndVictoriaNave",
+  "parent":{
+    "name":"Sonidos",
+    "path":"folders/Nave espacial/Sonidos.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndVictoriaNave.wav",
+  "type":0,
+  "volume":0.48,
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ProcessAttacks",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ProcessAttacks",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Pelea/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

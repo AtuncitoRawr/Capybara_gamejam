@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMove_and_Collide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMove_and_Collide",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Pelea/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -81,7 +81,7 @@ text[page_number] = _text;
 		{
 			case "oId":
 			
-			owner_id = oPlayer.id;
+			owner_id = oFighter.id;
 			txtb_dir = 1;
 			break;
 			

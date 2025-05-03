@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"General_scripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"General_scripts",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Pelea/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
